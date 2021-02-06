@@ -26,8 +26,20 @@
 
     <hr />
 
-    @{
-        //TODO #4: Loop over the search results to display all job fields.
-    }
+    <table class="job-listing">
+        @foreach (Job listing in ViewBag.jobs)
+        {
+            <tr>
+                <td>
+                    <p>Id: @listing.Id</p>
+                    <p>Name: @listing.Name</p>
+                    <p>Employer: @listing.Employer</p>
+                    <p>Location: @listing.Location</p>
+                    <p>Position Type: @listing.PositionType</p>
+                    <p>Skills: @listing.CoreCompetency</p>
+                </td>
+            </tr>
+        }
+    </table>}
 
 </div>
