@@ -25,7 +25,8 @@
     </form>
 
     <hr />
-
+    @if (ViewBag.Jobs != null)
+    {
     <table class="job-listing">
         @foreach (Job listing in ViewBag.jobs)
         {
@@ -40,6 +41,6 @@
                 </td>
             </tr>
         }
-    </table>}
-
+    </table>
+    }
 </div>
